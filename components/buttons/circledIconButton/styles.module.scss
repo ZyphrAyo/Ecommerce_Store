@@ -1,0 +1,35 @@
+.button{
+    margin-left: 10px;
+    position: relative;
+    border: none;
+    outline: none;
+    width: 170px;
+    height: 50px;
+    border-radius: 55px;
+    font-weight: 700;
+    color: $white-color;
+    background-color:$black-color ;
+    display: block;  
+    cursor: pointer;
+
+    &:hover{
+        color: $black-color;
+        background: $white-color;
+    }
+    .svg_wrap{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 4px;
+        right: 20px;
+        svg{
+            &:hover{
+                fill: $yellow-color;
+            }
+        }
+        
+    }
+}

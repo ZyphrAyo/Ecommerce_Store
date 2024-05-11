@@ -1,0 +1,41 @@
+.forgot{
+    min-height: calc(100vh - 500px);
+    display: grid;
+    place-items: center;
+
+    &_header{
+        display: flex;
+        align-items: center;
+        margin-left: -100px;
+        padding-bottom: 150px;
+        .back_svg{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;   
+
+            svg{
+                fill: #99221e;        
+            }
+            span{
+                margin-top: 5px;
+                font-weight: 600;
+                margin-left: 50px;
+                font-size: 17px;  
+                white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+                padding-bottom: 20px;
+                a{
+                    
+                    color: #99221e;
+                    cursor: pointer;
+                    padding-bottom:5px ;
+
+                    &:hover{
+                        color: #f5d547;
+                    }
+                }
+            }
+        }
+    }
+}

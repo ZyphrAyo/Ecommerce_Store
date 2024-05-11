@@ -1,0 +1,187 @@
+.main{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "menu header header"
+    "menu swiper user"
+    "menu offers user";
+
+    .menu{
+        grid-area: menu;
+        height: 580px;
+        background:#c9b9b9;background-color: #f9fcff;
+background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);border-radius: 4px;
+        box-shadow: $shadow-1;
+        
+
+        &__header {
+            width: 100%;
+            height: 35px;
+            background: $white-color;
+            border-bottom: 1px solid $black-color;
+            box-shadow: $shadow-1;
+            
+        }
+        &_list{
+            margin-top: 2px;
+
+        }
+        ul{
+            li{
+                height: 32px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                &:hover{
+                    background: $light-error-color !important;
+                }
+                
+                div{
+                    padding: 0 20px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    color:$black-color;
+                    svg{
+                        fill:$yellow-color ;
+                        stroke: $yellow-color;
+                    }
+                }
+            }
+        }
+    }
+    .header{
+        grid-area: header;
+        height: 40px;
+        background: white;
+        border-radius: 4px;
+        box-shadow: $shadow-1;
+    }
+    .swiper{
+        grid-area: swiper;
+        height: 3300px;
+        background: white;
+        border-radius: 4px;
+        box-shadow: $shadow-1;
+    }
+    .offers{
+        grid-area: offers;
+        overflow: hidden;
+        background: white;
+        border-radius: 4px;
+        box-shadow: $shadow-1;
+        height: 220px;
+        background-image: url("../../../public/images/flash.jpg");
+        background-position: -100px -145px;
+        background-size: cover;
+    }
+    .user{
+        position: relative;
+        grid-area: user;
+        height: 530px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: $shadow-1;
+        
+        &_container {
+          padding: 1rem;
+        }
+        &_infos {
+          position: absolute;
+          top: 1rem;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: $shadow-1;
+          }
+          h4 {
+            margin-top: 10px;
+            text-transform: capitalize;
+          }
+          &_btns {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            button {
+              width: 100px;
+              height: 35px;
+              border-radius: 5px;
+              cursor: pointer;
+              font-weight: 600;
+              &:first-of-type {
+                background: #1d1d1f ;
+                color: $white-color;
+                &:hover{
+                    background:  $white-color ;
+                    color:#1d1d1f ;
+                }
+              }
+              &:last-of-type {
+                color: #555;
+                &:hover{
+                    background:  $white-color ;
+                    color:#1d1d1f ;
+                }
+              }
+            }   
+        }
+     }
+     
+        &_links {
+          margin-top: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          flex-wrap: wrap;
+          li {
+            width: 50px;
+            height: 50px;
+            background: $white-color;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            transition: 0.2s;
+            padding-top: 7px;
+            svg {
+              width: 25px;
+              height: 25px;
+              stroke: $yellow-color
+            }
+            &:hover {
+              background: $error-color;
+              svg {
+                stroke: #1d1d1f;
+              }
+            }
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+              svg {
+                fill: $yellow-color;
+              }
+              &:hover {
+                svg {
+                  fill: #fff;
+                }
+              }
+            }
+          }
+        } 
+        &_footer {
+            position: absolute;
+            bottom: 0;
+            transform: rotate(180deg);
+          }   
+    }
+    
+}
+
